@@ -34,16 +34,16 @@
 #pragma mark - User Action
 
 - (IBAction)request_1:(id)sender {
-    
+//    
 //    NSURLSessionConfiguration *a = [NSURLSessionConfiguration defaultSessionConfiguration];
 //    a.requestCachePolicy = NSURLRequestReloadIgnoringCacheData;
 //    
-//    [[[AFHTTPSessionManager alloc] initWithBaseURL:nil sessionConfiguration:a] GET:@"https://devserver.api.myrightone.com/apiv3/util/test" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//    [[[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://devserver.api.myrightone.com/"] sessionConfiguration:a] GET:@"apiv3/util/test" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 //        NSLog(@"%@",responseObject);
 //    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
 //        
 //    }];
-//    
+//
     RACSignal *signal = [MARDispatch fetchBusiness1:nil];
     
     [signal subscribeNext:^(id  _Nullable x) {

@@ -16,9 +16,13 @@
         AFHTTPSessionManager *manager = [[MARKernel shareInstance] managerFromChannel:channel];
         
         NSString *domain = [[MARKernel shareInstance] domainFromChannel:channel];
-        NSString *url = [domain stringByAppendingString:package.path];
         
-        [manager taskWithURL:url method:package.method parameters:package.parameters success:^(NSURLSessionDataTask *task, id  _Nullable responseObject) {
+        // handle url to make sure not begin with `/`
+        NSString *validURL;
+        if ([package.path hasPrefix:@"/"]) { validURL = [package.path substringFromIndex:0]; }
+        else { validURL = package.path; };
+        
+        [manager taskWithURL:validURL method:package.method parameters:package.parameters success:^(NSURLSessionDataTask *task, id  _Nullable responseObject) {
             [subscriber sendNext:responseObject];
             [subscriber sendCompleted];
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError *error) {

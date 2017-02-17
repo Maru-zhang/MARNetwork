@@ -26,8 +26,6 @@
 		9E8B9E497DBBCCFBC5E8FF4F /* Pods_MARNetwork_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53087CAB0C99D7DB747A157 /* Pods_MARNetwork_Tests.framework */; };
 		AF8DD40C1E56A533005CDD07 /* MARNetworkConfig_Demo.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF8DD40B1E56A533005CDD07 /* MARNetworkConfig_Demo.plist */; };
 		AF8DD40F1E56B2FD005CDD07 /* MARDispatch+Module1.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DD40E1E56B2FD005CDD07 /* MARDispatch+Module1.m */; };
-		AF8DD4121E56C199005CDD07 /* MARDispatch+Module2.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DD4111E56C199005CDD07 /* MARDispatch+Module2.m */; };
-		AF8DD4151E56C1A4005CDD07 /* MARDispatch+Module3.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DD4141E56C1A4005CDD07 /* MARDispatch+Module3.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,10 +67,6 @@
 		AF8DD40B1E56A533005CDD07 /* MARNetworkConfig_Demo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MARNetworkConfig_Demo.plist; sourceTree = "<group>"; };
 		AF8DD40D1E56B2FD005CDD07 /* MARDispatch+Module1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MARDispatch+Module1.h"; sourceTree = "<group>"; };
 		AF8DD40E1E56B2FD005CDD07 /* MARDispatch+Module1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MARDispatch+Module1.m"; sourceTree = "<group>"; };
-		AF8DD4101E56C199005CDD07 /* MARDispatch+Module2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MARDispatch+Module2.h"; sourceTree = "<group>"; };
-		AF8DD4111E56C199005CDD07 /* MARDispatch+Module2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MARDispatch+Module2.m"; sourceTree = "<group>"; };
-		AF8DD4131E56C1A4005CDD07 /* MARDispatch+Module3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MARDispatch+Module3.h"; sourceTree = "<group>"; };
-		AF8DD4141E56C1A4005CDD07 /* MARDispatch+Module3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MARDispatch+Module3.m"; sourceTree = "<group>"; };
 		B14E42BBBC1D13DEBBB71401 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B53087CAB0C99D7DB747A157 /* Pods_MARNetwork_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MARNetwork_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F73C7F673066CF625B0883 /* Pods-MARNetwork_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MARNetwork_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MARNetwork_Tests/Pods-MARNetwork_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,9 +140,9 @@
 				AF8DD3FE1E55D6BF005CDD07 /* NetworkLayer */,
 				6003F59C195388D20070C39A /* MARAppDelegate.h */,
 				6003F59D195388D20070C39A /* MARAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* MARViewController.h */,
 				6003F5A6195388D20070C39A /* MARViewController.m */,
+				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -214,10 +208,6 @@
 				AF8DD40B1E56A533005CDD07 /* MARNetworkConfig_Demo.plist */,
 				AF8DD40D1E56B2FD005CDD07 /* MARDispatch+Module1.h */,
 				AF8DD40E1E56B2FD005CDD07 /* MARDispatch+Module1.m */,
-				AF8DD4101E56C199005CDD07 /* MARDispatch+Module2.h */,
-				AF8DD4111E56C199005CDD07 /* MARDispatch+Module2.m */,
-				AF8DD4131E56C1A4005CDD07 /* MARDispatch+Module3.h */,
-				AF8DD4141E56C1A4005CDD07 /* MARDispatch+Module3.m */,
 			);
 			name = NetworkLayer;
 			sourceTree = "<group>";
@@ -426,10 +416,8 @@
 			files = (
 				6003F59E195388D20070C39A /* MARAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* MARViewController.m in Sources */,
-				AF8DD4151E56C1A4005CDD07 /* MARDispatch+Module3.m in Sources */,
 				AF8DD40F1E56B2FD005CDD07 /* MARDispatch+Module1.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				AF8DD4121E56C199005CDD07 /* MARDispatch+Module2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

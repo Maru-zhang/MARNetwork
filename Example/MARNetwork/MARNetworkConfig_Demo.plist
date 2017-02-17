@@ -18,17 +18,6 @@
 		<dict/>
 		<key>GeneralParameters</key>
 		<dict/>
-		<key>Requests</key>
-		<array>
-			<dict>
-				<key>Path</key>
-				<string></string>
-				<key>Params</key>
-				<string></string>
-				<key>Method</key>
-				<string></string>
-			</dict>
-		</array>
 	</dict>
 </dict>
 </plist>

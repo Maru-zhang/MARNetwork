@@ -11,5 +11,10 @@
 @interface MARDispatch (Module1)
 
 + (RACSignal *)fetchBusiness1:(id)params;
++ (RACSignal *)fetchBusiness2:(id)params;
++ (RACSignal *)fetchBusiness3:(id)params;
++ (RACSignal *)fetchBusiness4:(id)params;
++ (RACSignal *)fetchBusiness5:(id)params;
++ (RACSignal *)fetchBusiness6:(id)params;
 
 @end

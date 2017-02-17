@@ -8,21 +8,16 @@
 
 #import "MARKernel.h"
 
-typedef enum : NSUInteger {
-    MARHTTPMethodTypeGET    = 0,
-    MARHTTPMethodTypePOST   = 1,
-    MARHTTPMethodTypePUT    = 2,
-    MARHTTPMethodTypeDELETE = 3,
-    MARHTTPMethodTypeHEAD   = 4,
-    MARHTTPMethodTypeCONNECT= 5,
-    MARHTTPMethodTypeOPTIONS= 6,
-    MARHTTPMethodTypeTRACE  = 7,
-} MARHTTPMethodType;
+static NSString *const MARConfigDomainKey       = @"Domain";
+static NSString *const MARConfigIdentifierKey   = @"Identifier";
+static NSString *const MARConfigCachePolicyKey  = @"RequestCachePolicy";
+static NSString *const MARConfigRequestTimeout  = @"TimeoutIntervalForRequest";
+static NSString *const MARConfigResourceTimeout = @"TimeoutIntervalForResource";
 
 static const NSMutableDictionary *MAR_HTTP_SESSION_MANAGERS;
 
 @interface MARKernel ()
-@property (nonatomic, strong, readwrite) AFHTTPSessionManager *manager;
+@property (nonatomic, strong) AFHTTPSessionManager *manager;
 @property (nonatomic, strong) NSDictionary *configPlist;
 @end
 @implementation MARKernel
@@ -53,7 +48,7 @@ static const NSMutableDictionary *MAR_HTTP_SESSION_MANAGERS;
 
 - (instancetype)init {
     if (self = [super init]) {
-        
+        _manager = [AFHTTPSessionManager manager];
     }
     return self;
 }
@@ -61,37 +56,40 @@ static const NSMutableDictionary *MAR_HTTP_SESSION_MANAGERS;
 #pragma mark - Public Method
 
 - (NSString *)domainFromChannel:(NSString *)channel {
-    return [[self.configPlist objectForKey:channel] objectForKey:@"Domain"];
+    return [[self.configPlist objectForKey:channel] objectForKey:MARConfigDomainKey];
+}
+
+- (void)registerChannelWithName:(NSString *)channelName baseURL:(NSString *)url managerCallBack:(MARManagerConfig)managerCallBack configCallBack:(MARSessionConfig)sessionCallBack {
+    if ([MAR_HTTP_SESSION_MANAGERS objectForKey:channelName]) {
+        return;
+    }else {
+        // create new session manager for this channel
+        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+        if (sessionCallBack) {
+            sessionCallBack(configuration);
+        }else {
+            // default configure
+            configuration.requestCachePolicy = NSURLRequestUseProtocolCachePolicy;
+            configuration.timeoutIntervalForRequest = 5.0f;
+            configuration.timeoutIntervalForResource = 5.0f;
+        }
+        AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:url] sessionConfiguration:configuration];
+        manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+        manager.responseSerializer = [AFJSONResponseSerializer serializer];
+        manager.securityPolicy = [AFSecurityPolicy defaultPolicy];
+        if (managerCallBack) {
+            managerCallBack(manager);
+        }
+        // store manager to dic.
+        [MAR_HTTP_SESSION_MANAGERS setObject:manager forKey:channelName];
+    }
 }
 
 - (AFHTTPSessionManager *)managerFromChannel:(NSString *)channel {
     // Lazy load
-    if (MAR_HTTP_SESSION_MANAGERS) {
-        AFHTTPSessionManager *manager = [MAR_HTTP_SESSION_MANAGERS objectForKey:channel];
-        if (manager) {
-            return manager;
-        }else {
-            NSDictionary *channel = [self.configPlist objectForKey:channel];
-            if (channel) {
-                // create a manager from specific manager and save to dic.
-                NSString *baseURL = [channel objectForKey:@"Domain"];
-                NSString *identifier = [channel objectForKey:@"Identifier"];
-                NSNumber *requestCachePolicy = [channel objectForKey:@"RequestCachePolicy"];
-                NSNumber *timeoutIntervalForRequest = [channel objectForKey:@"TimeoutIntervalForRequest"];
-                NSNumber *timeoutIntervalForResource = [channel objectForKey:@"TimeoutIntervalForResource"];
-                NSURLSessionConfiguration *configureation = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:identifier];
-                /// look up the map in `NSURLRequestCachePolicy`.
-                configureation.requestCachePolicy = [requestCachePolicy integerValue];
-                configureation.timeoutIntervalForRequest = [timeoutIntervalForRequest doubleValue];
-                configureation.timeoutIntervalForResource = [timeoutIntervalForResource doubleValue];
-                manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:baseURL] sessionConfiguration:configureation];
-                /// store manager to dic.
-                [MAR_HTTP_SESSION_MANAGERS setObject:manager forKey:channel];
-                return manager;
-            }else {
-                return [self defaultManager];
-            }
-        }
+    AFHTTPSessionManager *manager = [MAR_HTTP_SESSION_MANAGERS objectForKey:channel];
+    if (manager) {
+        return manager;
     }else {
         return [self defaultManager];
     }
@@ -100,7 +98,7 @@ static const NSMutableDictionary *MAR_HTTP_SESSION_MANAGERS;
 #pragma mark - Private Method
 
 - (AFHTTPSessionManager *)defaultManager {
-    return [AFHTTPSessionManager manager];
+    return _manager;
 }
 
 #pragma mark - Property

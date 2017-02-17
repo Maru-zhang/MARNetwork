@@ -244,6 +244,8 @@
 		AE976B0E8E3DD81E4F49DBEF19D3C0AD /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A9AF9B309308D258EF2D4E5A1BB6DA5 /* AFURLSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF09CCDFCE1D309425E74C23FC06BF2C /* RACErrorSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = B1EE70C6BFAA3CDDB7F3616F8513858D /* RACErrorSignal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF202F3AB32F3D4264C8074876D43EDF /* RACDisposable.h in Headers */ = {isa = PBXBuildFile; fileRef = E4D04C3C45908903EF772C9769ACC23B /* RACDisposable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF8DD41B1E571416005CDD07 /* MARChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = AF8DD4191E571416005CDD07 /* MARChannel.h */; };
+		AF8DD41C1E571416005CDD07 /* MARChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DD41A1E571416005CDD07 /* MARChannel.m */; };
 		B02E590F25193938460FBB4C2D7A5C5E /* RACScopedDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 648FE9330BB41E3B206F95C547667EEA /* RACScopedDisposable.m */; };
 		B0B6239D73D4EE927F710F8FFCEABD12 /* RACEXTRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 42E368A28198E900AF3583623F01C0B5 /* RACEXTRuntimeExtensions.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		B1487AC2DD502CCE46631C123E047D28 /* EXPMatchers+beFalsy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C62C5BF3208B4E71E3CB1CA39B694A5 /* EXPMatchers+beFalsy.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -686,6 +688,8 @@
 		AF01FF2A7B1A00E55916028A393F454C /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
 		AF87594741E919B1DFD4C0E8B0928534 /* Pods-MARNetwork_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MARNetwork_Tests-umbrella.h"; sourceTree = "<group>"; };
 		AF8DD40A1E56A4FA005CDD07 /* MARNetworkConfig_Demo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MARNetworkConfig_Demo.plist; sourceTree = "<group>"; };
+		AF8DD4191E571416005CDD07 /* MARChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARChannel.h; sourceTree = "<group>"; };
+		AF8DD41A1E571416005CDD07 /* MARChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MARChannel.m; sourceTree = "<group>"; };
 		AFBCE14CFBB0F188BE3EBAA753226AE4 /* EXPMatchers+raiseWithReason.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+raiseWithReason.m"; path = "Expecta/Matchers/EXPMatchers+raiseWithReason.m"; sourceTree = "<group>"; };
 		B1314FAB8F8B7D88A3C6115649BA408A /* UITextField+RACSignalSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+RACSignalSupport.m"; path = "ReactiveObjC/UITextField+RACSignalSupport.m"; sourceTree = "<group>"; };
 		B1535A3134A09B71E3D4AD6F08728CA4 /* EXPMatchers+beginWith.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beginWith.h"; path = "Expecta/Matchers/EXPMatchers+beginWith.h"; sourceTree = "<group>"; };
@@ -921,6 +925,8 @@
 				7DB21885540D8E0D04148A4158B5F3CC /* MARDispatch.m */,
 				6CACF2BAB1A166D8B20EE911778770DB /* MARPackage.h */,
 				9297B094F7F1D34BEECF3514EEC39EA3 /* MARPackage.m */,
+				AF8DD4191E571416005CDD07 /* MARChannel.h */,
+				AF8DD41A1E571416005CDD07 /* MARChannel.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1725,6 +1731,7 @@
 				F1CAA2EBDDFF558DEF98684F2479A7AF /* AFURLRequestSerialization.h in Headers */,
 				948458DC0A9308A2D8C018C37FB7BBDD /* AFURLResponseSerialization.h in Headers */,
 				AE976B0E8E3DD81E4F49DBEF19D3C0AD /* AFURLSessionManager.h in Headers */,
+				AF8DD41B1E571416005CDD07 /* MARChannel.h in Headers */,
 				45F802D04B3BE0CAEC586C2F3016027B /* UIActivityIndicatorView+AFNetworking.h in Headers */,
 				2B0705CC26A4CBEE32A5A60284AED35B /* UIButton+AFNetworking.h in Headers */,
 				9264BD69AFA8EE74F0D7F0EBD74F762F /* UIImage+AFNetworking.h in Headers */,
@@ -1922,6 +1929,7 @@
 				CEB2F0E229EF841D92C780C3FFDF1BEA /* AFSecurityPolicy.m in Sources */,
 				29476636EA86BEFC4CB833D3BB7A52D7 /* AFURLRequestSerialization.m in Sources */,
 				5A1D34D104D42B1EE399E23BCD7935A0 /* AFURLResponseSerialization.m in Sources */,
+				AF8DD41C1E571416005CDD07 /* MARChannel.m in Sources */,
 				D4E80BD7EAAB83200183110578A80591 /* AFURLSessionManager.m in Sources */,
 				140F458AB7312414FC423FEED70A3733 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				32076D3DD644045CF79DFFEBB6BFF3F2 /* UIButton+AFNetworking.m in Sources */,
