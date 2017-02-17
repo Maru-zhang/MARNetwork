@@ -103,6 +103,13 @@ static const NSMutableDictionary *MAR_HTTP_SESSION_MANAGERS;
     return [AFHTTPSessionManager manager];
 }
 
+#pragma mark - Property
 
+- (NSDictionary *)configPlist {
+    if (!_configPlist) {
+        _configPlist = @{};
+    }
+    return _configPlist;
+}
 
 @end
