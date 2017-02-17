@@ -24,6 +24,10 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		9E8B9E497DBBCCFBC5E8FF4F /* Pods_MARNetwork_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53087CAB0C99D7DB747A157 /* Pods_MARNetwork_Tests.framework */; };
+		AF8DD40C1E56A533005CDD07 /* MARNetworkConfig_Demo.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF8DD40B1E56A533005CDD07 /* MARNetworkConfig_Demo.plist */; };
+		AF8DD40F1E56B2FD005CDD07 /* MARDispatch+Module1.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DD40E1E56B2FD005CDD07 /* MARDispatch+Module1.m */; };
+		AF8DD4121E56C199005CDD07 /* MARDispatch+Module2.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DD4111E56C199005CDD07 /* MARDispatch+Module2.m */; };
+		AF8DD4151E56C1A4005CDD07 /* MARDispatch+Module3.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DD4141E56C1A4005CDD07 /* MARDispatch+Module3.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,7 @@
 
 /* Begin PBXFileReference section */
 		0D7400CDABED73341E29DEB9 /* Pods_MARNetwork_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MARNetwork_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		282ABC092CD607DDF1D0CA35 /* MARNetwork.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MARNetwork.podspec; path = ../MARNetwork.podspec; sourceTree = "<group>"; };
+		282ABC092CD607DDF1D0CA35 /* MARNetwork.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MARNetwork.podspec; path = ../MARNetwork.podspec; sourceTree = "<group>"; };
 		4DB13CAE65C2AB820442667B /* Pods-MARNetwork_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MARNetwork_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MARNetwork_Tests/Pods-MARNetwork_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* MARNetwork_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MARNetwork_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,10 +66,17 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A645204F15F715A14AD31A5E /* Pods-MARNetwork_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MARNetwork_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MARNetwork_Example/Pods-MARNetwork_Example.release.xcconfig"; sourceTree = "<group>"; };
-		B14E42BBBC1D13DEBBB71401 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		AF8DD40B1E56A533005CDD07 /* MARNetworkConfig_Demo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MARNetworkConfig_Demo.plist; sourceTree = "<group>"; };
+		AF8DD40D1E56B2FD005CDD07 /* MARDispatch+Module1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MARDispatch+Module1.h"; sourceTree = "<group>"; };
+		AF8DD40E1E56B2FD005CDD07 /* MARDispatch+Module1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MARDispatch+Module1.m"; sourceTree = "<group>"; };
+		AF8DD4101E56C199005CDD07 /* MARDispatch+Module2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MARDispatch+Module2.h"; sourceTree = "<group>"; };
+		AF8DD4111E56C199005CDD07 /* MARDispatch+Module2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MARDispatch+Module2.m"; sourceTree = "<group>"; };
+		AF8DD4131E56C1A4005CDD07 /* MARDispatch+Module3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MARDispatch+Module3.h"; sourceTree = "<group>"; };
+		AF8DD4141E56C1A4005CDD07 /* MARDispatch+Module3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MARDispatch+Module3.m"; sourceTree = "<group>"; };
+		B14E42BBBC1D13DEBBB71401 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B53087CAB0C99D7DB747A157 /* Pods_MARNetwork_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MARNetwork_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F73C7F673066CF625B0883 /* Pods-MARNetwork_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MARNetwork_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MARNetwork_Tests/Pods-MARNetwork_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		D2E820CB2E4DBAE72C73B153 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		D2E820CB2E4DBAE72C73B153 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E5AC7FCCDC92D97B7688AF7C /* Pods-MARNetwork_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MARNetwork_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MARNetwork_Example/Pods-MARNetwork_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +143,7 @@
 		6003F593195388D20070C39A /* Example for MARNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				AF8DD3FE1E55D6BF005CDD07 /* NetworkLayer */,
 				6003F59C195388D20070C39A /* MARAppDelegate.h */,
 				6003F59D195388D20070C39A /* MARAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -196,6 +208,20 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		AF8DD3FE1E55D6BF005CDD07 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				AF8DD40B1E56A533005CDD07 /* MARNetworkConfig_Demo.plist */,
+				AF8DD40D1E56B2FD005CDD07 /* MARDispatch+Module1.h */,
+				AF8DD40E1E56B2FD005CDD07 /* MARDispatch+Module1.m */,
+				AF8DD4101E56C199005CDD07 /* MARDispatch+Module2.h */,
+				AF8DD4111E56C199005CDD07 /* MARDispatch+Module2.m */,
+				AF8DD4131E56C1A4005CDD07 /* MARDispatch+Module3.h */,
+				AF8DD4141E56C1A4005CDD07 /* MARDispatch+Module3.m */,
+			);
+			name = NetworkLayer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,9 +273,12 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = MAR;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Maru-zhang";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 678WD436L9;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -282,6 +311,7 @@
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				AF8DD40C1E56A533005CDD07 /* MARNetworkConfig_Demo.plist in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,7 +426,10 @@
 			files = (
 				6003F59E195388D20070C39A /* MARAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* MARViewController.m in Sources */,
+				AF8DD4151E56C1A4005CDD07 /* MARDispatch+Module3.m in Sources */,
+				AF8DD40F1E56B2FD005CDD07 /* MARDispatch+Module1.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				AF8DD4121E56C199005CDD07 /* MARDispatch+Module2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,14 +492,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -499,13 +537,18 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -524,6 +567,7 @@
 			baseConfigurationReference = E5AC7FCCDC92D97B7688AF7C /* Pods-MARNetwork_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 678WD436L9;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MARNetwork/MARNetwork-Prefix.pch";
 				INFOPLIST_FILE = "MARNetwork/MARNetwork-Info.plist";
@@ -539,6 +583,7 @@
 			baseConfigurationReference = A645204F15F715A14AD31A5E /* Pods-MARNetwork_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 678WD436L9;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MARNetwork/MARNetwork-Prefix.pch";
 				INFOPLIST_FILE = "MARNetwork/MARNetwork-Info.plist";

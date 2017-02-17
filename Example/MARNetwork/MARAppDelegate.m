@@ -7,12 +7,16 @@
 //
 
 #import "MARAppDelegate.h"
+#import <MARNetwork/MARNetwork.h>
 
 @implementation MARAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [MARKernel loadConfigFromURL:[[NSBundle mainBundle] URLForResource:@"MARNetworkConfig_Demo" withExtension:@"plist"]];
+    
     return YES;
 }
 
