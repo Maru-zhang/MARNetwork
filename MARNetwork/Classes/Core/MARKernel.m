@@ -8,18 +8,6 @@
 
 #import "MARKernel.h"
 
-#if __has_include(<AFNetworking/AFNetworking.h>)
-#import <AFNetworking/AFNetworking.h>
-#else
-#import "AFNetworking.h"
-#endif
-
-#if __has_include(<AFNetworking/AFNetworking.h>)
-#import <ReactiveObjc/ReactiveObjc.h>
-#else
-#import "ReactiveObjc.h"
-#endif
-
 typedef enum : NSUInteger {
     MARHTTPMethodTypeGET    = 0,
     MARHTTPMethodTypePOST   = 1,

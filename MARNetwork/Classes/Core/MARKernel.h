@@ -7,7 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-@class AFHTTPSessionManager;
+
+#if __has_include("ReactiveCocoa.h")
+#import "ReactiveCocoa.h"
+#else
+#import <ReactiveObjC/ReactiveObjC.h>
+#endif
+
+#if __has_include(<AFNetworking/AFNetworking.h>)
+#import <AFNetworking/AFNetworking.h>
+#else
+#import "AFNetworking.h"
+#endif
 
 
 @interface MARKernel : NSObject

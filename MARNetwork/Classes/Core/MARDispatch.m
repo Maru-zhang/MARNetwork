@@ -7,11 +7,10 @@
 //
 
 #import "MARDispatch.h"
-#import "MARKernel.h"
 
 @implementation MARDispatch
 
-+ (RACSignal *)deliverWithPackage:(MARPackage *)package channel:(NSString *)channel {
++ (RACSignal *_Nonnull)deliverWithPackage:(MARPackage *_Nonnull)package channel:(NSString *_Nullable)channel {
     return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
         
         AFHTTPSessionManager *manager = [[MARKernel shareInstance] managerFromChannel:channel];
@@ -36,12 +35,11 @@
 
 @implementation AFHTTPSessionManager (MARExtension)
 
-- (void)taskWithURL:(NSString *)url
+- (void)taskWithURL:(NSString * _Nonnull)url
              method:(MARHTTPMethodType)method
          parameters:(nullable id)parameters
-            success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
-            failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure
-{
+            success:(nullable void (^)(NSURLSessionDataTask *_Nullable task, id _Nullable responseObject))success
+            failure:(nullable void (^)(NSURLSessionDataTask *_Nullable task, NSError *_Nullable error))failure {
     switch (method) {
         case 0: {
             [self GET:url parameters:parameters progress:nil success:success failure:failure];
@@ -67,6 +65,5 @@
         }
     }
 }
-
 
 @end
