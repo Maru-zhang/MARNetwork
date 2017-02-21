@@ -20,12 +20,12 @@
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		9E8B9E497DBBCCFBC5E8FF4F /* Pods_MARNetwork_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53087CAB0C99D7DB747A157 /* Pods_MARNetwork_Tests.framework */; };
 		AF8DD40C1E56A533005CDD07 /* MARNetworkConfig_Demo.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF8DD40B1E56A533005CDD07 /* MARNetworkConfig_Demo.plist */; };
 		AF8DD40F1E56B2FD005CDD07 /* MARDispatch+Module1.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DD40E1E56B2FD005CDD07 /* MARDispatch+Module1.m */; };
+		AFD678DC1E5C79EF009F2815 /* MARTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD678DB1E5C79EF009F2815 /* MARTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +59,6 @@
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -67,6 +66,8 @@
 		AF8DD40B1E56A533005CDD07 /* MARNetworkConfig_Demo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MARNetworkConfig_Demo.plist; sourceTree = "<group>"; };
 		AF8DD40D1E56B2FD005CDD07 /* MARDispatch+Module1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MARDispatch+Module1.h"; sourceTree = "<group>"; };
 		AF8DD40E1E56B2FD005CDD07 /* MARDispatch+Module1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MARDispatch+Module1.m"; sourceTree = "<group>"; };
+		AFD678DA1E5C79EF009F2815 /* MARTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARTestCase.h; sourceTree = "<group>"; };
+		AFD678DB1E5C79EF009F2815 /* MARTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MARTestCase.m; sourceTree = "<group>"; };
 		B14E42BBBC1D13DEBBB71401 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B53087CAB0C99D7DB747A157 /* Pods_MARNetwork_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MARNetwork_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F73C7F673066CF625B0883 /* Pods-MARNetwork_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MARNetwork_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MARNetwork_Tests/Pods-MARNetwork_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,7 +166,8 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6003F5BB195388D20070C39A /* Tests.m */,
+				AFD678DA1E5C79EF009F2815 /* MARTestCase.h */,
+				AFD678DB1E5C79EF009F2815 /* MARTestCase.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
 			);
 			path = Tests;
@@ -417,6 +419,7 @@
 				6003F59E195388D20070C39A /* MARAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* MARViewController.m in Sources */,
 				AF8DD40F1E56B2FD005CDD07 /* MARDispatch+Module1.m in Sources */,
+				AFD678DC1E5C79EF009F2815 /* MARTestCase.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,7 +428,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BC195388D20070C39A /* Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

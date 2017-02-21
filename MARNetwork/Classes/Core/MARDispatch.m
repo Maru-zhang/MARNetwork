@@ -8,7 +8,82 @@
 
 #import "MARDispatch.h"
 
+@interface MARDispatch ()
+@property (nonatomic, copy) NSString *url;
+@property (nonatomic, strong) id params;
+@property (nonatomic, strong) NSDictionary *httpHeader;
+@property (nonatomic, copy) NSString *channelName;
+@property (nonatomic, assign) MARHTTPMethodType type;
+@property (nonatomic, weak) NSURLSessionDataTask *task;
+@end
 @implementation MARDispatch
+
+- (MARDispatch *(^)(NSString *))channel {
+    return ^id(NSString *name) {
+        _channelName = name;
+        return self;
+    };
+}
+
+- (MARDispatch *(^)(NSDictionary *))header {
+    return ^id(NSDictionary *header) {
+        _httpHeader = header;
+        return self;
+    };
+}
+
+- (MARDispatch *)get {
+    _type = MARHTTPMethodTypeGET;
+    return self;
+}
+
+- (MARDispatch *)post {
+    _type = MARHTTPMethodTypePOST;
+    return self;
+}
+
+- (MARDispatch *)dele {
+    _type = MARHTTPMethodTypeDELETE;
+    return self;
+}
+
+- (MARDispatch *)put {
+    _type = MARHTTPMethodTypePUT;
+    return self;
+}
+
+- (RACSignal *)start {
+    
+    NSAssert(_url != nil, @"request url could not be nil !");
+    NSAssert(_channelName != nil, @"channel name could not be nil");
+    
+    return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        
+        AFHTTPSessionManager *manager = [[MARKernel shareInstance] managerFromChannel:_channelName];
+        
+        NSString *domain = [[MARKernel shareInstance] domainFromChannel:_channelName];
+        
+        // handle url to make sure not begin with `/`
+        NSString *validURL;
+        if ([_url hasPrefix:@"/"]) { validURL = [_url substringFromIndex:0]; }
+        else { validURL = _url; };
+        
+        self.task = [manager taskWithURL:validURL method:_type parameters:_params success:^(NSURLSessionDataTask *task, id  _Nullable responseObject) {
+            [subscriber sendNext:responseObject];
+            [subscriber sendCompleted];
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError *error) {
+            [subscriber sendError:error];
+        }];
+        
+        return [RACDisposable disposableWithBlock:^{
+            [self.task cancel];
+        }];
+    }];
+}
+
+- (void)stop {
+    if (self.task) { [self.task cancel]; }
+}
 
 + (RACSignal *_Nonnull)deliverWithPackage:(MARPackage *_Nonnull)package channel:(NSString *_Nullable)channel {
     return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
@@ -39,33 +114,28 @@
 
 @implementation AFHTTPSessionManager (MARExtension)
 
-- (void)taskWithURL:(NSString * _Nonnull)url
+- (NSURLSessionDataTask *)taskWithURL:(NSString * _Nonnull)url
              method:(MARHTTPMethodType)method
          parameters:(nullable id)parameters
             success:(nullable void (^)(NSURLSessionDataTask *_Nullable task, id _Nullable responseObject))success
             failure:(nullable void (^)(NSURLSessionDataTask *_Nullable task, NSError *_Nullable error))failure {
     switch (method) {
         case 0: {
-            [self GET:url parameters:parameters progress:nil success:success failure:failure];
-            break;
+            return [self GET:url parameters:parameters progress:nil success:success failure:failure];
         }
         case 1: {
-            [self POST:url parameters:parameters progress:nil success:success failure:failure];
-            break;
+            return [self POST:url parameters:parameters progress:nil success:success failure:failure];
         }
         case 2: {
-            [self PUT:url parameters:parameters success:success failure:failure];
-            break;
+            return [self PUT:url parameters:parameters success:success failure:failure];
         }
         case 3: {
-            [self DELETE:url parameters:parameters success:success failure:failure];
-            break;
+            return [self DELETE:url parameters:parameters success:success failure:failure];
         }
         case 4: {
-            [self HEAD:url parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task) {
+            return [self HEAD:url parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task) {
                 success(task,nil);
             } failure:failure];
-            break;
         }
     }
 }

@@ -12,6 +12,14 @@
 
 @implementation MARDispatch (Module1)
 
+- (MARDispatch *(^)(id))util {
+    return ^id (id params) {
+        [self setValue:@"apiv3/util/test" forKey:@"url"];
+        [self setValue:params forKey:@"params"];
+        return self;
+    };
+}
+
 + (RACSignal *)fetchBusiness1:(id)params {
     MARPackage *package = [MARPackage packageWithPath:@"apiv3/util/test" method:MARHTTPMethodTypeGET parameters:params configure:^(MARRequestConfig *config) {
         
