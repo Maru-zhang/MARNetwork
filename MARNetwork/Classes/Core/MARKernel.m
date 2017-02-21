@@ -14,6 +14,8 @@ static NSString *const MARConfigCachePolicyKey  = @"RequestCachePolicy";
 static NSString *const MARConfigRequestTimeout  = @"TimeoutIntervalForRequest";
 static NSString *const MARConfigResourceTimeout = @"TimeoutIntervalForResource";
 
+NSString *const MARMainChannelKey = @"MARNetwork.channel.main";
+
 static const NSMutableDictionary *MAR_HTTP_SESSION_MANAGERS;
 
 @interface MARKernel ()
@@ -57,6 +59,10 @@ static const NSMutableDictionary *MAR_HTTP_SESSION_MANAGERS;
 
 - (NSString *)domainFromChannel:(NSString *)channel {
     return [[self.configPlist objectForKey:channel] objectForKey:MARConfigDomainKey];
+}
+
+- (void)registerMainChannelWithBaseURL:(NSString *)url managerCallBack:(MARManagerConfig)managerCallBack configCallBack:(MARSessionConfig)sessionCallBack {
+    [self registerChannelWithName:MARMainChannelKey baseURL:url managerCallBack:managerCallBack configCallBack:sessionCallBack];
 }
 
 - (void)registerChannelWithName:(NSString *)channelName baseURL:(NSString *)url managerCallBack:(MARManagerConfig)managerCallBack configCallBack:(MARSessionConfig)sessionCallBack {

@@ -15,9 +15,13 @@
 {
     // Override point for customization after application launch.
     
-//    [MARKernel loadConfigFromURL:[[NSBundle mainBundle] URLForResource:@"MARNetworkConfig_Demo" withExtension:@"plist"]];
-    
     [[MARKernel shareInstance] registerChannelWithName:@"right" baseURL:@"https://devserver.api.myrightone.com/" managerCallBack:nil configCallBack:nil];
+    
+    [[MARKernel shareInstance] registerMainChannelWithBaseURL:@"https://httpbin.org/" managerCallBack:^(AFHTTPSessionManager *manager) {
+        
+    } configCallBack:^(NSURLSessionConfiguration *configureation) {
+        
+    }];
     
     return YES;
 }

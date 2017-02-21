@@ -1,8 +1,8 @@
 {
   "name": "MARNetwork",
   "version": "0.1.0",
-  "summary": "A short description of MARNetwork.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "A tiny and legant Network abstraction layer with ReactiveObjC.",
+  "description": "This network layer was inspire by Moya and YTKNetwork, compare with YTKNetwork, MARNetwork improve two awesome features.firstly,you can make serveral domain request by MARNetwork and you can wisely manage them.Secondly, you can use ReactiveObjc with Network Layer, so that make your app more and more legant.",
   "homepage": "https://github.com/Maru-zhang/MARNetwork",
   "license": {
     "type": "MIT",

@@ -18,6 +18,11 @@
 @end
 @implementation MARDispatch
 
+- (MARDispatch *)mainChannel {
+    _channelName = MARMainChannelKey;
+    return self;
+}
+
 - (MARDispatch *(^)(NSString *))channel {
     return ^id(NSString *name) {
         _channelName = name;

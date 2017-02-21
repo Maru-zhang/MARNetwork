@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_MARNetwork_TestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_MARNetwork_TestsVersionString[];
+FOUNDATION_EXPORT double Pods_MARNetwork_ExampleTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_MARNetwork_ExampleTestsVersionString[];
 

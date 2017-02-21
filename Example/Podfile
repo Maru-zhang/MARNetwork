@@ -3,9 +3,8 @@ use_frameworks!
 target 'MARNetwork_Example' do
   pod 'MARNetwork', :path => '../'
 
-  target 'MARNetwork_Tests' do
+  target 'MARNetwork_ExampleTests' do
     inherit! :search_paths
-
     pod 'Specta'
   pod 'Expecta'
   end

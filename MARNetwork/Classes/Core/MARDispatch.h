@@ -18,7 +18,7 @@
 
 /******** Channel Operation **********/
 
-- (nonnull MARDispatch * (^)())mainChannel;
+- (nonnull MARDispatch *)mainChannel;
 - (nonnull MARDispatch * _Nonnull (^)(NSString * _Nonnull name))channel;
 
 /******** Header Operation **********/

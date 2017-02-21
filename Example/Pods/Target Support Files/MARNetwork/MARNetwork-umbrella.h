@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "MARChannel.h"
 #import "MARDispatch.h"
 #import "MARKernel.h"
 #import "MARNetwork.h"

@@ -20,6 +20,8 @@
 #import "AFNetworking.h"
 #endif
 
+extern NSString *const MARMainChannelKey;
+
 typedef void(^MARManagerConfig)(AFHTTPSessionManager *manager);
 typedef void(^MARSessionConfig)(NSURLSessionConfiguration *configureation);
 
@@ -28,18 +30,21 @@ typedef void(^MARSessionConfig)(NSURLSessionConfiguration *configureation);
 /// Single Instance
 + (instancetype)shareInstance;
 
-/// load config dictionary from specific URL.
-+ (void)loadConfigFromURL:(NSURL *)url;
+/// Register Main Channel For MARNetwork
+- (void)registerMainChannelWithBaseURL:(NSString *)url
+                       managerCallBack:(MARManagerConfig)managerCallBack
+                        configCallBack:(MARSessionConfig)sessionCallBack;
 
-
-/// Register a Channel For MARNetwork, Notice: ====> baseURL should end with "\" character !!!!
+/// Register a Channel For MARNetwork With a specific identifier
 - (void)registerChannelWithName:(NSString *)channelName
                         baseURL:(NSString *)url
                 managerCallBack:(MARManagerConfig)managerCallBack
                  configCallBack:(MARSessionConfig)sessionCallBack;
+
 /// fetch domain string belong to a specific channel
 - (NSString *)domainFromChannel:(NSString *)channel;
-/// fetch a http session manager belong to a specific channel.
+
+/// fetch a http session manager belong to a specific channel
 - (AFHTTPSessionManager *)managerFromChannel:(NSString *)channel;
 
 @end

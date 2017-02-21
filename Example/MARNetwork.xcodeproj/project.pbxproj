@@ -16,25 +16,24 @@
 		6003F59E195388D20070C39A /* MARAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* MARAppDelegate.m */; };
 		6003F5A7195388D20070C39A /* MARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* MARViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
-		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
-		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
-		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
-		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		9E8B9E497DBBCCFBC5E8FF4F /* Pods_MARNetwork_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53087CAB0C99D7DB747A157 /* Pods_MARNetwork_Tests.framework */; };
 		AF8DD40C1E56A533005CDD07 /* MARNetworkConfig_Demo.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF8DD40B1E56A533005CDD07 /* MARNetworkConfig_Demo.plist */; };
 		AF8DD40F1E56B2FD005CDD07 /* MARDispatch+Module1.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DD40E1E56B2FD005CDD07 /* MARDispatch+Module1.m */; };
-		AFD678DC1E5C79EF009F2815 /* MARTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD678DB1E5C79EF009F2815 /* MARTestCase.m */; };
+		AFD678F21E5C9CC8009F2815 /* MARTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD678F11E5C9CC8009F2815 /* MARTestCase.m */; };
+		AFD678F51E5CA04D009F2815 /* MARNormalRequestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD678F41E5CA04D009F2815 /* MARNormalRequestTest.m */; };
+		AFD678F91E5CA201009F2815 /* MARDispatch+HTTPBin.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD678F81E5CA201009F2815 /* MARDispatch+HTTPBin.m */; };
+		AFD678FA1E5CA8A6009F2815 /* MARDispatch+HTTPBin.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD678F81E5CA201009F2815 /* MARDispatch+HTTPBin.m */; };
+		D94C9344B64FECDEAE0FC13E /* Pods_MARNetwork_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97A9D41AD90A729EAE89504 /* Pods_MARNetwork_ExampleTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6003F5B3195388D20070C39A /* PBXContainerItemProxy */ = {
+		AFD678EB1E5C9C0C009F2815 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6003F582195388D10070C39A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6003F589195388D20070C39A;
-			remoteInfo = MARNetwork;
+			remoteInfo = MARNetwork_Example;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -55,23 +54,27 @@
 		6003F5A5195388D20070C39A /* MARViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MARViewController.h; sourceTree = "<group>"; };
 		6003F5A6195388D20070C39A /* MARViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MARViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6003F5AE195388D20070C39A /* MARNetwork_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MARNetwork_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
-		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		777C8D90F1E7F4984E257AD3 /* Pods-MARNetwork_ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MARNetwork_ExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MARNetwork_ExampleTests/Pods-MARNetwork_ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A645204F15F715A14AD31A5E /* Pods-MARNetwork_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MARNetwork_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MARNetwork_Example/Pods-MARNetwork_Example.release.xcconfig"; sourceTree = "<group>"; };
 		AF8DD40B1E56A533005CDD07 /* MARNetworkConfig_Demo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MARNetworkConfig_Demo.plist; sourceTree = "<group>"; };
 		AF8DD40D1E56B2FD005CDD07 /* MARDispatch+Module1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MARDispatch+Module1.h"; sourceTree = "<group>"; };
 		AF8DD40E1E56B2FD005CDD07 /* MARDispatch+Module1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MARDispatch+Module1.m"; sourceTree = "<group>"; };
-		AFD678DA1E5C79EF009F2815 /* MARTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARTestCase.h; sourceTree = "<group>"; };
-		AFD678DB1E5C79EF009F2815 /* MARTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MARTestCase.m; sourceTree = "<group>"; };
+		AFD678DD1E5C9794009F2815 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		AFD678E61E5C9C0C009F2815 /* MARNetwork_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MARNetwork_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFD678EA1E5C9C0C009F2815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFD678F01E5C9CC8009F2815 /* MARTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARTestCase.h; sourceTree = "<group>"; };
+		AFD678F11E5C9CC8009F2815 /* MARTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MARTestCase.m; sourceTree = "<group>"; };
+		AFD678F41E5CA04D009F2815 /* MARNormalRequestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MARNormalRequestTest.m; sourceTree = "<group>"; };
+		AFD678F71E5CA201009F2815 /* MARDispatch+HTTPBin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MARDispatch+HTTPBin.h"; path = "MARNetwork_ExampleTests/MARDispatch+HTTPBin.h"; sourceTree = SOURCE_ROOT; };
+		AFD678F81E5CA201009F2815 /* MARDispatch+HTTPBin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MARDispatch+HTTPBin.m"; path = "MARNetwork_ExampleTests/MARDispatch+HTTPBin.m"; sourceTree = SOURCE_ROOT; };
 		B14E42BBBC1D13DEBBB71401 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B53087CAB0C99D7DB747A157 /* Pods_MARNetwork_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MARNetwork_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1A6D934168D424B8AE996F9 /* Pods-MARNetwork_ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MARNetwork_ExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MARNetwork_ExampleTests/Pods-MARNetwork_ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C3F73C7F673066CF625B0883 /* Pods-MARNetwork_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MARNetwork_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MARNetwork_Tests/Pods-MARNetwork_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2E820CB2E4DBAE72C73B153 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		D97A9D41AD90A729EAE89504 /* Pods_MARNetwork_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MARNetwork_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5AC7FCCDC92D97B7688AF7C /* Pods-MARNetwork_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MARNetwork_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MARNetwork_Example/Pods-MARNetwork_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,14 +90,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6003F5AB195388D20070C39A /* Frameworks */ = {
+		AFD678E31E5C9C0C009F2815 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
-				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
-				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				9E8B9E497DBBCCFBC5E8FF4F /* Pods_MARNetwork_Tests.framework in Frameworks */,
+				D94C9344B64FECDEAE0FC13E /* Pods_MARNetwork_ExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +106,7 @@
 			children = (
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for MARNetwork */,
-				6003F5B5195388D20070C39A /* Tests */,
+				AFD678E71E5C9C0C009F2815 /* MARNetwork_ExampleTests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				60C0CFA9AB0BE439FF7592C6 /* Pods */,
@@ -117,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				6003F58A195388D20070C39A /* MARNetwork_Example.app */,
-				6003F5AE195388D20070C39A /* MARNetwork_Tests.xctest */,
+				AFD678E61E5C9C0C009F2815 /* MARNetwork_ExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,12 +125,13 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFD678DD1E5C9794009F2815 /* XCTest.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
-				6003F5AF195388D20070C39A /* XCTest.framework */,
 				0D7400CDABED73341E29DEB9 /* Pods_MARNetwork_Example.framework */,
 				B53087CAB0C99D7DB747A157 /* Pods_MARNetwork_Tests.framework */,
+				D97A9D41AD90A729EAE89504 /* Pods_MARNetwork_ExampleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -163,26 +164,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6003F5B5195388D20070C39A /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				AFD678DA1E5C79EF009F2815 /* MARTestCase.h */,
-				AFD678DB1E5C79EF009F2815 /* MARTestCase.m */,
-				6003F5B6195388D20070C39A /* Supporting Files */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		6003F5B6195388D20070C39A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6003F5B7195388D20070C39A /* Tests-Info.plist */,
-				6003F5B8195388D20070C39A /* InfoPlist.strings */,
-				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		60C0CFA9AB0BE439FF7592C6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +171,8 @@
 				A645204F15F715A14AD31A5E /* Pods-MARNetwork_Example.release.xcconfig */,
 				C3F73C7F673066CF625B0883 /* Pods-MARNetwork_Tests.debug.xcconfig */,
 				4DB13CAE65C2AB820442667B /* Pods-MARNetwork_Tests.release.xcconfig */,
+				C1A6D934168D424B8AE996F9 /* Pods-MARNetwork_ExampleTests.debug.xcconfig */,
+				777C8D90F1E7F4984E257AD3 /* Pods-MARNetwork_ExampleTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -207,11 +190,24 @@
 		AF8DD3FE1E55D6BF005CDD07 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				AF8DD40B1E56A533005CDD07 /* MARNetworkConfig_Demo.plist */,
+				AFD678F71E5CA201009F2815 /* MARDispatch+HTTPBin.h */,
+				AFD678F81E5CA201009F2815 /* MARDispatch+HTTPBin.m */,
 				AF8DD40D1E56B2FD005CDD07 /* MARDispatch+Module1.h */,
 				AF8DD40E1E56B2FD005CDD07 /* MARDispatch+Module1.m */,
+				AF8DD40B1E56A533005CDD07 /* MARNetworkConfig_Demo.plist */,
 			);
 			name = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		AFD678E71E5C9C0C009F2815 /* MARNetwork_ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				AFD678F01E5C9CC8009F2815 /* MARTestCase.h */,
+				AFD678F11E5C9CC8009F2815 /* MARTestCase.m */,
+				AFD678F41E5CA04D009F2815 /* MARNormalRequestTest.m */,
+				AFD678EA1E5C9C0C009F2815 /* Info.plist */,
+			);
+			path = MARNetwork_ExampleTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,25 +233,25 @@
 			productReference = 6003F58A195388D20070C39A /* MARNetwork_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6003F5AD195388D20070C39A /* MARNetwork_Tests */ = {
+		AFD678E51E5C9C0C009F2815 /* MARNetwork_ExampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "MARNetwork_Tests" */;
+			buildConfigurationList = AFD678ED1E5C9C0C009F2815 /* Build configuration list for PBXNativeTarget "MARNetwork_ExampleTests" */;
 			buildPhases = (
-				BF560C577283E52406E63D6A /* [CP] Check Pods Manifest.lock */,
-				6003F5AA195388D20070C39A /* Sources */,
-				6003F5AB195388D20070C39A /* Frameworks */,
-				6003F5AC195388D20070C39A /* Resources */,
-				9C1269B3DFDA0B3CF2621055 /* [CP] Embed Pods Frameworks */,
-				182A33FC2369C0A5058B98AD /* [CP] Copy Pods Resources */,
+				14A028D2E9B228EA9D4D3AF0 /* [CP] Check Pods Manifest.lock */,
+				AFD678E21E5C9C0C009F2815 /* Sources */,
+				AFD678E31E5C9C0C009F2815 /* Frameworks */,
+				AFD678E41E5C9C0C009F2815 /* Resources */,
+				16317A37EAB6C88A31374D54 /* [CP] Embed Pods Frameworks */,
+				632800F26354148E866CCFFF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6003F5B4195388D20070C39A /* PBXTargetDependency */,
+				AFD678EC1E5C9C0C009F2815 /* PBXTargetDependency */,
 			);
-			name = MARNetwork_Tests;
-			productName = MARNetworkTests;
-			productReference = 6003F5AE195388D20070C39A /* MARNetwork_Tests.xctest */;
+			name = MARNetwork_ExampleTests;
+			productName = MARNetwork_ExampleTests;
+			productReference = AFD678E61E5C9C0C009F2815 /* MARNetwork_ExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -271,7 +267,10 @@
 					6003F589195388D20070C39A = {
 						DevelopmentTeam = 678WD436L9;
 					};
-					6003F5AD195388D20070C39A = {
+					AFD678E51E5C9C0C009F2815 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 678WD436L9;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 6003F589195388D20070C39A;
 					};
 				};
@@ -290,7 +289,7 @@
 			projectRoot = "";
 			targets = (
 				6003F589195388D20070C39A /* MARNetwork_Example */,
-				6003F5AD195388D20070C39A /* MARNetwork_Tests */,
+				AFD678E51E5C9C0C009F2815 /* MARNetwork_ExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -308,30 +307,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6003F5AC195388D20070C39A /* Resources */ = {
+		AFD678E41E5C9C0C009F2815 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		182A33FC2369C0A5058B98AD /* [CP] Copy Pods Resources */ = {
+		14A028D2E9B228EA9D4D3AF0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MARNetwork_Tests/Pods-MARNetwork_Tests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		16317A37EAB6C88A31374D54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MARNetwork_ExampleTests/Pods-MARNetwork_ExampleTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		26E7349D727E7B06C6305769 /* [CP] Copy Pods Resources */ = {
@@ -349,6 +362,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MARNetwork_Example/Pods-MARNetwork_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		632800F26354148E866CCFFF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MARNetwork_ExampleTests/Pods-MARNetwork_ExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6A7B421CE4393F3FE0A720E8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,21 +390,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		9C1269B3DFDA0B3CF2621055 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MARNetwork_Tests/Pods-MARNetwork_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A6BF2C4C7973040E4879A8EB /* [CP] Embed Pods Frameworks */ = {
@@ -394,21 +407,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MARNetwork_Example/Pods-MARNetwork_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BF560C577283E52406E63D6A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -418,26 +416,29 @@
 			files = (
 				6003F59E195388D20070C39A /* MARAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* MARViewController.m in Sources */,
+				AFD678FA1E5CA8A6009F2815 /* MARDispatch+HTTPBin.m in Sources */,
 				AF8DD40F1E56B2FD005CDD07 /* MARDispatch+Module1.m in Sources */,
-				AFD678DC1E5C79EF009F2815 /* MARTestCase.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6003F5AA195388D20070C39A /* Sources */ = {
+		AFD678E21E5C9C0C009F2815 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD678F21E5C9CC8009F2815 /* MARTestCase.m in Sources */,
+				AFD678F91E5CA201009F2815 /* MARDispatch+HTTPBin.m in Sources */,
+				AFD678F51E5CA04D009F2815 /* MARNormalRequestTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6003F5B4195388D20070C39A /* PBXTargetDependency */ = {
+		AFD678EC1E5C9C0C009F2815 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6003F589195388D20070C39A /* MARNetwork_Example */;
-			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
+			targetProxy = AFD678EB1E5C9C0C009F2815 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -446,14 +447,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				6003F597195388D20070C39A /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6003F5B9195388D20070C39A /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -584,47 +577,42 @@
 			};
 			name = Release;
 		};
-		6003F5C3195388D20070C39A /* Debug */ = {
+		AFD678EE1E5C9C0C009F2815 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3F73C7F673066CF625B0883 /* Pods-MARNetwork_Tests.debug.xcconfig */;
+			baseConfigurationReference = C1A6D934168D424B8AE996F9 /* Pods-MARNetwork_ExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Tests/Tests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 678WD436L9;
+				INFOPLIST_FILE = MARNetwork_ExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alloc.MARNetwork-ExampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MARNetwork_Example.app/MARNetwork_Example";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
-		6003F5C4195388D20070C39A /* Release */ = {
+		AFD678EF1E5C9C0C009F2815 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DB13CAE65C2AB820442667B /* Pods-MARNetwork_Tests.release.xcconfig */;
+			baseConfigurationReference = 777C8D90F1E7F4984E257AD3 /* Pods-MARNetwork_ExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
-				INFOPLIST_FILE = "Tests/Tests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 678WD436L9;
+				INFOPLIST_FILE = MARNetwork_ExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alloc.MARNetwork-ExampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MARNetwork_Example.app/MARNetwork_Example";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -649,11 +637,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "MARNetwork_Tests" */ = {
+		AFD678ED1E5C9C0C009F2815 /* Build configuration list for PBXNativeTarget "MARNetwork_ExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6003F5C3195388D20070C39A /* Debug */,
-				6003F5C4195388D20070C39A /* Release */,
+				AFD678EE1E5C9C0C009F2815 /* Debug */,
+				AFD678EF1E5C9C0C009F2815 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

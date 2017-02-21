@@ -9,6 +9,7 @@
 #import "MARViewController.h"
 #import <MARNetwork/MARNetwork.h>
 #import "MARDispatch+Module1.h"
+#import "MARDispatch+HTTPBin.h"
 
 
 @interface MARViewController ()
@@ -33,7 +34,9 @@
 
 - (IBAction)request_1:(id)sender {
 
-    RACSignal *signal = MARDispatchCenter.channel(@"right").get.util(nil).start;
+//    RACSignal *signal = MARDispatchCenter.channel(@"right").get.util(nil).start;
+    RACSignal *signal = MARDispatchCenter.mainChannel.post.postRequest(@{@"key": @"value"}).start;    
+//    RACSignal *signal = MARDispatchCenter.mainChannel.get.getRequest(nil).start;
     
     [signal subscribeNext:^(id  _Nullable x) {
         NSLog(@"请求成功:%@",x);
@@ -46,9 +49,6 @@
     [signal subscribeCompleted:^{
         NSLog(@"请求完成");
     }];
-    
-    
-    
 }
 
 
