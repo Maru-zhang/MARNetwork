@@ -15,4 +15,7 @@
 - (MARDispatch *(^)(id))deleteRequest;
 - (MARDispatch *(^)(id))putRequest;
 
+/// first params is url, second is xxx etc...
+- (MARPackageBlock)user;
+
 @end

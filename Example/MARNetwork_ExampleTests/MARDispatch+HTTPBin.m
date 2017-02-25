@@ -42,4 +42,12 @@
     };
 }
 
+- (MARPackageBlock)user {
+    return ^id (RACTuple *tuple) {
+        [self setValue:tuple forKey:@"url"];
+        [self setValue:tuple.second forKey:@"params"];
+        return self;
+    };
+}
+
 @end

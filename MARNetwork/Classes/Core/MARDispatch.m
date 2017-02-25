@@ -9,12 +9,7 @@
 #import "MARDispatch.h"
 
 @interface MARDispatch ()
-@property (nonatomic, copy) NSString *url;
-@property (nonatomic, strong) id params;
-@property (nonatomic, strong) NSDictionary *httpHeader;
-@property (nonatomic, copy) NSString *channelName;
-@property (nonatomic, assign) MARHTTPMethodType type;
-@property (nonatomic, weak) NSURLSessionDataTask *task;
+@property (nonatomic, strong) NSMutableArray *tasksPool;
 @end
 @implementation MARDispatch
 
@@ -86,6 +81,10 @@
     }];
 }
 
+- (RACSignal *)upload {
+    
+}
+
 - (void)stop {
     if (self.task) { [self.task cancel]; }
 }
@@ -102,7 +101,7 @@
         if ([package.path hasPrefix:@"/"]) { validURL = [package.path substringFromIndex:0]; }
         else { validURL = package.path; };
         
-        [manager taskWithURL:validURL method:package.method parameters:package.parameters success:^(NSURLSessionDataTask *task, id  _Nullable responseObject) {
+        NSURLSessionDataTask *task = [manager taskWithURL:validURL method:package.method parameters:package.parameters success:^(NSURLSessionDataTask *task, id  _Nullable responseObject) {
             [subscriber sendNext:responseObject];
             [subscriber sendCompleted];
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError *error) {
@@ -113,6 +112,17 @@
             
         }];
     }];
+}
+
+#pragma mark - Property
+
+- (NSMutableArray *)tasksPool {
+    if (!_tasksPool) {
+        @synchronized (self) {
+            _tasksPool = [NSMutableArray array];
+        }
+    }
+    return _tasksPool;
 }
 
 @end

@@ -245,6 +245,8 @@
 		AE7BBD46BA00A9AC69249ADA56402162 /* EXPUnsupportedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B939BA76B0CB6F9C42A3284A17A79C5E /* EXPUnsupportedObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AE976B0E8E3DD81E4F49DBEF19D3C0AD /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A9AF9B309308D258EF2D4E5A1BB6DA5 /* AFURLSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEFD4E7469A16FAB1FF9ABA5A8E434DA /* RACStringSequence.h in Headers */ = {isa = PBXBuildFile; fileRef = E684587B2B9B27465680F608A2D02768 /* RACStringSequence.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF6E07B61E61B8A900DD9AF5 /* MARReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6E07B21E61B75400DD9AF5 /* MARReachability.m */; };
+		AF6E07B71E61BA1E00DD9AF5 /* MARReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = AF6E07B11E61B75400DD9AF5 /* MARReachability.h */; };
 		B00E3468FAD382EFA2509301FD3A9A64 /* SPTCallSite.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F869F15AA285D64FA3293C9CDB78E27 /* SPTCallSite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B0563D5A4F362EDBE1B25C824D151451 /* RACDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1907210ABBF615807B220E83F8DA426 /* RACDelegateProxy.m */; };
 		B0583406BEC412211A8FAE74C8262DA4 /* UITextField+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = B1314FAB8F8B7D88A3C6115649BA408A /* UITextField+RACSignalSupport.m */; };
@@ -341,7 +343,6 @@
 		EE669FC8C7F481E02F7C83DEA95BFB54 /* RACImmediateScheduler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3008C838D668F2C81975A0E4769BD659 /* RACImmediateScheduler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF4D24587CE8F882735A9D792FFF7163 /* RACSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE86F1D889657D6685D8939874E188D /* RACSubject.m */; };
 		EFC4A620A46DBF4EBFD1F162D8F1BFE5 /* UITextView+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 3042807D8666C2A8BCEB6C9228DCD4C9 /* UITextView+RACSignalSupport.m */; };
-		F0AFF30257B0A35BC594F86EBE4544BA /* MARNetworkConfig_Demo.plist in Sources */ = {isa = PBXBuildFile; fileRef = 42D1C6A83A2EEB07D1C1EC431AB7C921 /* MARNetworkConfig_Demo.plist */; };
 		F1CAA2EBDDFF558DEF98684F2479A7AF /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DCF6796B33CD0CC113F58F2093B0ABE /* AFURLRequestSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F2D899C7AA0D7FC20160091BB9D31CF3 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC49B0E9F01382E818CEB368381E4E5 /* UIImageView+AFNetworking.m */; };
 		F2DFC20B9D085F599FA6989F0773975E /* RACTupleSequence.h in Headers */ = {isa = PBXBuildFile; fileRef = 510D649764E250E996FBA06BB702C827 /* RACTupleSequence.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -511,7 +512,6 @@
 		410EC673CADF2ED2185E88CF362E007C /* UIAlertView+RACSignalSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+RACSignalSupport.h"; path = "ReactiveObjC/UIAlertView+RACSignalSupport.h"; sourceTree = "<group>"; };
 		425E2CCC872FED46DECC24DCFC620BD2 /* Expecta-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Expecta-umbrella.h"; sourceTree = "<group>"; };
 		429B077DED47958301618E581BA35D9D /* RACScopedDisposable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACScopedDisposable.h; path = ReactiveObjC/RACScopedDisposable.h; sourceTree = "<group>"; };
-		42D1C6A83A2EEB07D1C1EC431AB7C921 /* MARNetworkConfig_Demo.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = MARNetworkConfig_Demo.plist; sourceTree = "<group>"; };
 		42E368A28198E900AF3583623F01C0B5 /* RACEXTRuntimeExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACEXTRuntimeExtensions.h; path = ReactiveObjC/extobjc/RACEXTRuntimeExtensions.h; sourceTree = "<group>"; };
 		4351B8FC0B74971DA3F26F3CD84D77FA /* EXPMatchers+haveCountOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+haveCountOf.m"; path = "Expecta/Matchers/EXPMatchers+haveCountOf.m"; sourceTree = "<group>"; };
 		4507CBD13FC2914686AF4468BDF7C1A7 /* RACArraySequence.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACArraySequence.m; path = ReactiveObjC/RACArraySequence.m; sourceTree = "<group>"; };
@@ -693,6 +693,8 @@
 		ADEAAE63655065FE22BF6839067C70A4 /* NSEnumerator+RACSequenceAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSEnumerator+RACSequenceAdditions.m"; path = "ReactiveObjC/NSEnumerator+RACSequenceAdditions.m"; sourceTree = "<group>"; };
 		AEA7AC9AC1BC3C70A2869B79504F4D86 /* NSDictionary+RACSequenceAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+RACSequenceAdditions.m"; path = "ReactiveObjC/NSDictionary+RACSequenceAdditions.m"; sourceTree = "<group>"; };
 		AF01FF2A7B1A00E55916028A393F454C /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
+		AF6E07B11E61B75400DD9AF5 /* MARReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARReachability.h; sourceTree = "<group>"; };
+		AF6E07B21E61B75400DD9AF5 /* MARReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MARReachability.m; sourceTree = "<group>"; };
 		AFBCE14CFBB0F188BE3EBAA753226AE4 /* EXPMatchers+raiseWithReason.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+raiseWithReason.m"; path = "Expecta/Matchers/EXPMatchers+raiseWithReason.m"; sourceTree = "<group>"; };
 		B1314FAB8F8B7D88A3C6115649BA408A /* UITextField+RACSignalSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+RACSignalSupport.m"; path = "ReactiveObjC/UITextField+RACSignalSupport.m"; sourceTree = "<group>"; };
 		B1535A3134A09B71E3D4AD6F08728CA4 /* EXPMatchers+beginWith.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beginWith.h"; path = "Expecta/Matchers/EXPMatchers+beginWith.h"; sourceTree = "<group>"; };
@@ -949,14 +951,6 @@
 				C294410B3A2C7C21ECF834EF167DC6E2 /* Classes */,
 			);
 			path = MARNetwork;
-			sourceTree = "<group>";
-		};
-		61273B39A7C293A30EFFCC5EDA602C7E /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				42D1C6A83A2EEB07D1C1EC431AB7C921 /* MARNetworkConfig_Demo.plist */,
-			);
-			path = Config;
 			sourceTree = "<group>";
 		};
 		63ECA643F1E1AF57BD339FA34202471F /* Expecta */ = {
@@ -1293,6 +1287,8 @@
 				FBEC107299039780DFAEF94A6F10B118 /* MARKernel.m */,
 				CE534C6EC451EABA3B1C1CCC4C12ABD7 /* MARPackage.h */,
 				ADCC304208BA6B3214455CD8A8DAEAF4 /* MARPackage.m */,
+				AF6E07B11E61B75400DD9AF5 /* MARReachability.h */,
+				AF6E07B21E61B75400DD9AF5 /* MARReachability.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1371,7 +1367,6 @@
 		C294410B3A2C7C21ECF834EF167DC6E2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				61273B39A7C293A30EFFCC5EDA602C7E /* Config */,
 				8BE6A797E693C5A07F4EF895FB97C5B8 /* Core */,
 			);
 			path = Classes;
@@ -1550,6 +1545,7 @@
 			files = (
 				45AE08A1621066C0546B01F7FEC93064 /* MARChannel.h in Headers */,
 				6CABB16322CB678CF9D65BC39294D48E /* MARDispatch.h in Headers */,
+				AF6E07B71E61BA1E00DD9AF5 /* MARReachability.h in Headers */,
 				D2F8B490AC7857A8F7BD08E16C87C8A6 /* MARKernel.h in Headers */,
 				8B7C70B6A3DE613361C2F043E7B17620 /* MARNetwork-umbrella.h in Headers */,
 				97D0649AF8FE26EDF64BE6EC3E8E635E /* MARNetwork.h in Headers */,
@@ -1931,8 +1927,8 @@
 				955985EEE81E8862C4A969FC6AA758F2 /* MARChannel.m in Sources */,
 				7E20947C0469197C87C812E5D138A415 /* MARDispatch.m in Sources */,
 				C7D20CB0CA22D24FE3207C92198CC7C9 /* MARKernel.m in Sources */,
+				AF6E07B61E61B8A900DD9AF5 /* MARReachability.m in Sources */,
 				9E6A5E739B1BACA0662519CB745F78E9 /* MARNetwork-dummy.m in Sources */,
-				F0AFF30257B0A35BC594F86EBE4544BA /* MARNetworkConfig_Demo.plist in Sources */,
 				F6F1CC1A2A7660C72831E31CB0A2B07B /* MARPackage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
