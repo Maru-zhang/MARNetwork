@@ -11,7 +11,7 @@
 #if __has_include("ReactiveCocoa.h")
 #import "ReactiveCocoa.h"
 #else
-#import <ReactiveObjC/ReactiveObjC.h>
+#import <ReactiveObjC/ReactiveObjc.h>
 #endif
 
 #if __has_include(<AFNetworking/AFNetworking.h>)
@@ -24,6 +24,14 @@ extern NSString *const MARMainChannelKey;
 
 typedef void(^MARManagerConfig)(AFHTTPSessionManager *manager);
 typedef void(^MARSessionConfig)(NSURLSessionConfiguration *configureation);
+
+typedef enum : NSUInteger {
+    MARHTTPMethodTypeGET     = 0,
+    MARHTTPMethodTypePOST    = 1,
+    MARHTTPMethodTypePUT     = 2,
+    MARHTTPMethodTypeDELETE  = 3,
+    MARHTTPMethodTypeHEAD    = 4,
+} MARHTTPMethodType;
 
 @interface MARKernel : NSObject
 

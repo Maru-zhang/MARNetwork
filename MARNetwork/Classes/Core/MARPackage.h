@@ -7,15 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-@class MARRequestConfig;
+#import "MARKernel.h"
 
-typedef enum : NSUInteger {
-    MARHTTPMethodTypeGET     = 0,
-    MARHTTPMethodTypePOST    = 1,
-    MARHTTPMethodTypePUT     = 2,
-    MARHTTPMethodTypeDELETE  = 3,
-    MARHTTPMethodTypeHEAD    = 4,
-} MARHTTPMethodType;
+@class MARRequestConfig;
 
 typedef void(^MARRequestConfigBlock)(MARRequestConfig *config);
 

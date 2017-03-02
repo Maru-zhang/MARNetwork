@@ -24,6 +24,8 @@ typedef MARDispatch *(^MARPackageBlock)(RACTuple *tuple);
 @property (nonatomic, strong) NSSet *httpHeader;
 @property (nonatomic, assign) MARHTTPMethodType type;
 
++ (instancetype)defaultCenter;
+
 ///------------------------
 /// @name Channel Operation
 ///------------------------

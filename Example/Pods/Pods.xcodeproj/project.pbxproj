@@ -247,6 +247,8 @@
 		AEFD4E7469A16FAB1FF9ABA5A8E434DA /* RACStringSequence.h in Headers */ = {isa = PBXBuildFile; fileRef = E684587B2B9B27465680F608A2D02768 /* RACStringSequence.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF6E07B61E61B8A900DD9AF5 /* MARReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6E07B21E61B75400DD9AF5 /* MARReachability.m */; };
 		AF6E07B71E61BA1E00DD9AF5 /* MARReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = AF6E07B11E61B75400DD9AF5 /* MARReachability.h */; };
+		AF8EAD681E6860D100465FE8 /* MAREntity.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8EAD661E6860D100465FE8 /* MAREntity.m */; };
+		AF8EAD691E6860FD00465FE8 /* MAREntity.h in Headers */ = {isa = PBXBuildFile; fileRef = AF8EAD651E6860D100465FE8 /* MAREntity.h */; };
 		B00E3468FAD382EFA2509301FD3A9A64 /* SPTCallSite.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F869F15AA285D64FA3293C9CDB78E27 /* SPTCallSite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B0563D5A4F362EDBE1B25C824D151451 /* RACDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1907210ABBF615807B220E83F8DA426 /* RACDelegateProxy.m */; };
 		B0583406BEC412211A8FAE74C8262DA4 /* UITextField+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = B1314FAB8F8B7D88A3C6115649BA408A /* UITextField+RACSignalSupport.m */; };
@@ -695,6 +697,8 @@
 		AF01FF2A7B1A00E55916028A393F454C /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
 		AF6E07B11E61B75400DD9AF5 /* MARReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARReachability.h; sourceTree = "<group>"; };
 		AF6E07B21E61B75400DD9AF5 /* MARReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MARReachability.m; sourceTree = "<group>"; };
+		AF8EAD651E6860D100465FE8 /* MAREntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAREntity.h; sourceTree = "<group>"; };
+		AF8EAD661E6860D100465FE8 /* MAREntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAREntity.m; sourceTree = "<group>"; };
 		AFBCE14CFBB0F188BE3EBAA753226AE4 /* EXPMatchers+raiseWithReason.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+raiseWithReason.m"; path = "Expecta/Matchers/EXPMatchers+raiseWithReason.m"; sourceTree = "<group>"; };
 		B1314FAB8F8B7D88A3C6115649BA408A /* UITextField+RACSignalSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+RACSignalSupport.m"; path = "ReactiveObjC/UITextField+RACSignalSupport.m"; sourceTree = "<group>"; };
 		B1535A3134A09B71E3D4AD6F08728CA4 /* EXPMatchers+beginWith.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beginWith.h"; path = "Expecta/Matchers/EXPMatchers+beginWith.h"; sourceTree = "<group>"; };
@@ -1285,6 +1289,8 @@
 				99EB64FD9B35501F6B0AFB4A201A1291 /* MARDispatch.m */,
 				6D77B9DA112FC78D83032FFF6E08DAF0 /* MARKernel.h */,
 				FBEC107299039780DFAEF94A6F10B118 /* MARKernel.m */,
+				AF8EAD651E6860D100465FE8 /* MAREntity.h */,
+				AF8EAD661E6860D100465FE8 /* MAREntity.m */,
 				CE534C6EC451EABA3B1C1CCC4C12ABD7 /* MARPackage.h */,
 				ADCC304208BA6B3214455CD8A8DAEAF4 /* MARPackage.m */,
 				AF6E07B11E61B75400DD9AF5 /* MARReachability.h */,
@@ -1549,6 +1555,7 @@
 				D2F8B490AC7857A8F7BD08E16C87C8A6 /* MARKernel.h in Headers */,
 				8B7C70B6A3DE613361C2F043E7B17620 /* MARNetwork-umbrella.h in Headers */,
 				97D0649AF8FE26EDF64BE6EC3E8E635E /* MARNetwork.h in Headers */,
+				AF8EAD691E6860FD00465FE8 /* MAREntity.h in Headers */,
 				875096560571DF6AF4C0AE24896CA140 /* MARPackage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1937,6 +1944,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF8EAD681E6860D100465FE8 /* MAREntity.m in Sources */,
 				A3591DEDA776B48C026E7F9144981E58 /* AFAutoPurgingImageCache.m in Sources */,
 				EAF16633DB3C992CF975BE4A2932D41C /* AFHTTPSessionManager.m in Sources */,
 				A398D63C8DED664D99A864D79881A13C /* AFImageDownloader.m in Sources */,

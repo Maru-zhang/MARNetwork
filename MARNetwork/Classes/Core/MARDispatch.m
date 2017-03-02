@@ -7,21 +7,31 @@
 //
 
 #import "MARDispatch.h"
+#import "MAREntity.h"
 
 @interface MARDispatch ()
 @property (nonatomic, strong) NSMutableArray *tasksPool;
 @end
 @implementation MARDispatch
 
++ (instancetype)defaultCenter {
+    static MARDispatch *dispatch;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        dispatch = [[MARDispatch alloc] init];
+    });
+    return dispatch;
+}
+
 - (MARDispatch *)mainChannel {
-    _channelName = MARMainChannelKey;
-    return self;
+    MAREntity *entity = [[MAREntity alloc] initWithChannelName:MARMainChannelKey];
+    return entity;
 }
 
 - (MARDispatch *(^)(NSString *))channel {
     return ^id(NSString *name) {
-        _channelName = name;
-        return self;
+        MAREntity *entity = [[MAREntity alloc] initWithChannelName:name];
+        return entity;
     };
 }
 
@@ -68,15 +78,17 @@
         if ([_url hasPrefix:@"/"]) { validURL = [_url substringFromIndex:0]; }
         else { validURL = _url; };
         
-        self.task = [manager taskWithURL:validURL method:_type parameters:_params success:^(NSURLSessionDataTask *task, id  _Nullable responseObject) {
+        NSURLSessionTask *task = [manager taskWithURL:validURL method:_type parameters:_params success:^(NSURLSessionDataTask *task, id  _Nullable responseObject) {
             [subscriber sendNext:responseObject];
             [subscriber sendCompleted];
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError *error) {
             [subscriber sendError:error];
         }];
         
+        NSInteger identifier = task.taskIdentifier;
+        
         return [RACDisposable disposableWithBlock:^{
-            [self.task cancel];
+            
         }];
     }];
 }
@@ -86,7 +98,7 @@
 }
 
 - (void)stop {
-    if (self.task) { [self.task cancel]; }
+    
 }
 
 + (RACSignal *_Nonnull)deliverWithPackage:(MARPackage *_Nonnull)package channel:(NSString *_Nullable)channel {
@@ -118,9 +130,7 @@
 
 - (NSMutableArray *)tasksPool {
     if (!_tasksPool) {
-        @synchronized (self) {
-            _tasksPool = [NSMutableArray array];
-        }
+        _tasksPool = [NSMutableArray array];
     }
     return _tasksPool;
 }
