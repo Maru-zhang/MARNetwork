@@ -23,107 +23,16 @@
     return dispatch;
 }
 
-- (MARDispatch *)mainChannel {
+- (MAREntity *)mainChannel {
     MAREntity *entity = [[MAREntity alloc] initWithChannelName:MARMainChannelKey];
     return entity;
 }
 
-- (MARDispatch *(^)(NSString *))channel {
+- (MAREntity *(^)(NSString *))channel {
     return ^id(NSString *name) {
         MAREntity *entity = [[MAREntity alloc] initWithChannelName:name];
         return entity;
     };
-}
-
-- (MARDispatch *(^)(NSDictionary *))header {
-    return ^id(NSDictionary *header) {
-        _httpHeader = header;
-        return self;
-    };
-}
-
-- (MARDispatch *)get {
-    _type = MARHTTPMethodTypeGET;
-    return self;
-}
-
-- (MARDispatch *)post {
-    _type = MARHTTPMethodTypePOST;
-    return self;
-}
-
-- (MARDispatch *)dele {
-    _type = MARHTTPMethodTypeDELETE;
-    return self;
-}
-
-- (MARDispatch *)put {
-    _type = MARHTTPMethodTypePUT;
-    return self;
-}
-
-- (RACSignal *)start {
-    
-    NSAssert(_url != nil, @"request url could not be nil !");
-    NSAssert(_channelName != nil, @"channel name could not be nil");
-    
-    return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-        
-        AFHTTPSessionManager *manager = [[MARKernel shareInstance] managerFromChannel:_channelName];
-        
-        NSString *domain = [[MARKernel shareInstance] domainFromChannel:_channelName];
-        
-        // handle url to make sure not begin with `/`
-        NSString *validURL;
-        if ([_url hasPrefix:@"/"]) { validURL = [_url substringFromIndex:0]; }
-        else { validURL = _url; };
-        
-        NSURLSessionTask *task = [manager taskWithURL:validURL method:_type parameters:_params success:^(NSURLSessionDataTask *task, id  _Nullable responseObject) {
-            [subscriber sendNext:responseObject];
-            [subscriber sendCompleted];
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError *error) {
-            [subscriber sendError:error];
-        }];
-        
-        NSInteger identifier = task.taskIdentifier;
-        
-        return [RACDisposable disposableWithBlock:^{
-            
-        }];
-    }];
-}
-
-- (RACSignal *)upload {
-    
-}
-
-- (void)stop {
-    
-}
-
-+ (RACSignal *_Nonnull)deliverWithPackage:(MARPackage *_Nonnull)package channel:(NSString *_Nullable)channel {
-    return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-        
-        AFHTTPSessionManager *manager = [[MARKernel shareInstance] managerFromChannel:channel];
-        
-        NSString *domain = [[MARKernel shareInstance] domainFromChannel:channel];
-        
-        // handle url to make sure not begin with `/`
-        NSString *validURL;
-        if ([package.path hasPrefix:@"/"]) { validURL = [package.path substringFromIndex:0]; }
-        else { validURL = package.path; };
-        
-        NSURLSessionDataTask *task = [manager taskWithURL:validURL method:package.method parameters:package.parameters success:^(NSURLSessionDataTask *task, id  _Nullable responseObject) {
-            [subscriber sendNext:responseObject];
-            [subscriber sendCompleted];
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError *error) {
-            [subscriber sendError:error];
-        }];
-        
-        return [RACDisposable disposableWithBlock:^{
-            
-        }];
-    }];
 }
 
 #pragma mark - Property

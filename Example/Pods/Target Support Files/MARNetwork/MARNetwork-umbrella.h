@@ -10,11 +10,11 @@
 #endif
 #endif
 
-#import "MARChannel.h"
 #import "MARDispatch.h"
+#import "MAREntity.h"
 #import "MARKernel.h"
 #import "MARNetwork.h"
-#import "MARPackage.h"
+#import "MARReachability.h"
 
 FOUNDATION_EXPORT double MARNetworkVersionNumber;
 FOUNDATION_EXPORT const unsigned char MARNetworkVersionString[];

@@ -10,12 +10,14 @@
 
 #import <MARNetwork/MARKernel.h>
 #import <MARNetwork/MARDispatch.h>
-//#import <MARNetwork/MARReachability.h>
+#import <MARNetwork/MAREntity.h>
+#import <MARNetwork/MARReachability.h>
 
 #else
 
 #import "MARKernel.h"
 #import "MARDispatch.h"
-//#import "MARNetwork/MARReachability.h"
+#import "MAREntity.h"
+#import "MARNetwork/MARReachability.h"
 
 #endif /* __has_include */

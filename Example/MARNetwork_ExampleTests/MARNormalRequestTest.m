@@ -8,7 +8,6 @@
 
 #import "MARTestCase.h"
 #import <MARNetwork/MARNetwork.h>
-#import "MARDispatch+HTTPBin.h"
 
 @interface MARNormalRequestTest : MARTestCase
 @end

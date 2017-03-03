@@ -20,6 +20,21 @@
 #import "AFNetworking.h"
 #endif
 
+#define MARInterface(selecter_name) - (MARPackageBlock)selecter_name;
+
+#define MARImplementation(selecter_name,url,keys) \
+- (MARPackageBlock)selecter_name { \
+return ^id (RACTuple *tuple) { \
+[self setValue:url forKey:@"url"]; \
+NSMutableDictionary *params = [NSMutableDictionary dictionary]; \
+[keys enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) { \
+[params setObject:tuple[idx] forKey:obj]; \
+}]; \
+[self setValue:params forKey:@"params"]; \
+return self; \
+}; \
+} \
+
 extern NSString *const MARMainChannelKey;
 
 typedef void(^MARManagerConfig)(AFHTTPSessionManager *manager);

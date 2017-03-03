@@ -18,12 +18,9 @@
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		AF8DD40C1E56A533005CDD07 /* MARNetworkConfig_Demo.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF8DD40B1E56A533005CDD07 /* MARNetworkConfig_Demo.plist */; };
-		AF8DD40F1E56B2FD005CDD07 /* MARDispatch+Module1.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DD40E1E56B2FD005CDD07 /* MARDispatch+Module1.m */; };
+		AF8EAD6E1E69E47A00465FE8 /* MAREntity+Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8EAD6D1E69E47A00465FE8 /* MAREntity+Demo.m */; };
 		AFD678F21E5C9CC8009F2815 /* MARTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD678F11E5C9CC8009F2815 /* MARTestCase.m */; };
 		AFD678F51E5CA04D009F2815 /* MARNormalRequestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD678F41E5CA04D009F2815 /* MARNormalRequestTest.m */; };
-		AFD678F91E5CA201009F2815 /* MARDispatch+HTTPBin.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD678F81E5CA201009F2815 /* MARDispatch+HTTPBin.m */; };
-		AFD678FA1E5CA8A6009F2815 /* MARDispatch+HTTPBin.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD678F81E5CA201009F2815 /* MARDispatch+HTTPBin.m */; };
 		D94C9344B64FECDEAE0FC13E /* Pods_MARNetwork_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97A9D41AD90A729EAE89504 /* Pods_MARNetwork_ExampleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,17 +55,14 @@
 		777C8D90F1E7F4984E257AD3 /* Pods-MARNetwork_ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MARNetwork_ExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MARNetwork_ExampleTests/Pods-MARNetwork_ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A645204F15F715A14AD31A5E /* Pods-MARNetwork_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MARNetwork_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MARNetwork_Example/Pods-MARNetwork_Example.release.xcconfig"; sourceTree = "<group>"; };
-		AF8DD40B1E56A533005CDD07 /* MARNetworkConfig_Demo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MARNetworkConfig_Demo.plist; sourceTree = "<group>"; };
-		AF8DD40D1E56B2FD005CDD07 /* MARDispatch+Module1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MARDispatch+Module1.h"; sourceTree = "<group>"; };
-		AF8DD40E1E56B2FD005CDD07 /* MARDispatch+Module1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MARDispatch+Module1.m"; sourceTree = "<group>"; };
+		AF8EAD6C1E69E47A00465FE8 /* MAREntity+Demo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MAREntity+Demo.h"; sourceTree = "<group>"; };
+		AF8EAD6D1E69E47A00465FE8 /* MAREntity+Demo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MAREntity+Demo.m"; sourceTree = "<group>"; };
 		AFD678DD1E5C9794009F2815 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		AFD678E61E5C9C0C009F2815 /* MARNetwork_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MARNetwork_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD678EA1E5C9C0C009F2815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFD678F01E5C9CC8009F2815 /* MARTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARTestCase.h; sourceTree = "<group>"; };
 		AFD678F11E5C9CC8009F2815 /* MARTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MARTestCase.m; sourceTree = "<group>"; };
 		AFD678F41E5CA04D009F2815 /* MARNormalRequestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MARNormalRequestTest.m; sourceTree = "<group>"; };
-		AFD678F71E5CA201009F2815 /* MARDispatch+HTTPBin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MARDispatch+HTTPBin.h"; path = "MARNetwork_ExampleTests/MARDispatch+HTTPBin.h"; sourceTree = SOURCE_ROOT; };
-		AFD678F81E5CA201009F2815 /* MARDispatch+HTTPBin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MARDispatch+HTTPBin.m"; path = "MARNetwork_ExampleTests/MARDispatch+HTTPBin.m"; sourceTree = SOURCE_ROOT; };
 		B14E42BBBC1D13DEBBB71401 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B53087CAB0C99D7DB747A157 /* Pods_MARNetwork_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MARNetwork_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A6D934168D424B8AE996F9 /* Pods-MARNetwork_ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MARNetwork_ExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MARNetwork_ExampleTests/Pods-MARNetwork_ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -190,11 +184,8 @@
 		AF8DD3FE1E55D6BF005CDD07 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				AFD678F71E5CA201009F2815 /* MARDispatch+HTTPBin.h */,
-				AFD678F81E5CA201009F2815 /* MARDispatch+HTTPBin.m */,
-				AF8DD40D1E56B2FD005CDD07 /* MARDispatch+Module1.h */,
-				AF8DD40E1E56B2FD005CDD07 /* MARDispatch+Module1.m */,
-				AF8DD40B1E56A533005CDD07 /* MARNetworkConfig_Demo.plist */,
+				AF8EAD6C1E69E47A00465FE8 /* MAREntity+Demo.h */,
+				AF8EAD6D1E69E47A00465FE8 /* MAREntity+Demo.m */,
 			);
 			name = NetworkLayer;
 			sourceTree = "<group>";
@@ -302,7 +293,6 @@
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
-				AF8DD40C1E56A533005CDD07 /* MARNetworkConfig_Demo.plist in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,10 +404,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF8EAD6E1E69E47A00465FE8 /* MAREntity+Demo.m in Sources */,
 				6003F59E195388D20070C39A /* MARAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* MARViewController.m in Sources */,
-				AFD678FA1E5CA8A6009F2815 /* MARDispatch+HTTPBin.m in Sources */,
-				AF8DD40F1E56B2FD005CDD07 /* MARDispatch+Module1.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,7 +416,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFD678F21E5C9CC8009F2815 /* MARTestCase.m in Sources */,
-				AFD678F91E5CA201009F2815 /* MARDispatch+HTTPBin.m in Sources */,
 				AFD678F51E5CA04D009F2815 /* MARNormalRequestTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

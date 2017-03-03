@@ -8,8 +8,7 @@
 
 #import "MARViewController.h"
 #import <MARNetwork/MARNetwork.h>
-#import "MARDispatch+Module1.h"
-#import "MARDispatch+HTTPBin.h"
+#import "MAREntity+Demo.h"
 
 @interface MARViewController ()
 @property (nonatomic, strong) NSTimer *timer;
@@ -32,22 +31,21 @@
 #pragma mark - User Action
 
 - (IBAction)request_1:(id)sender {
-
-//    RACSignal *signal = MARDispatchCenter.channel(@"right").get.util(nil).start;
-    RACSignal *signal = MARDispatchCenter.mainChannel.post.postRequest(@{@"key": @"value"}).start;    
-//    RACSignal *signal = MARDispatchCenter.mainChannel.get.getRequest(nil).start;
+    
+    RACSignal *signal = MARDispatchCenter.mainChannel.get.getRequest(RACTuplePack(@"params")).start;
     
     [signal subscribeNext:^(id  _Nullable x) {
         NSLog(@"请求成功:%@",x);
     }];
-    
+
     [signal subscribeError:^(NSError * _Nullable error) {
         NSLog(@"请求失败:%@",error);
     }];
-    
+
     [signal subscribeCompleted:^{
         NSLog(@"请求完成");
     }];
+    
 }
 
 

@@ -8,13 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "MARKernel.h"
-#import "MARPackage.h"
 
-@class MARPackage;
 @class MARDispatch;
+@class MAREntity;
 
-#define MARDispatchCenter [[MARDispatch alloc] init]
-typedef MARDispatch *(^MARPackageBlock)(RACTuple *tuple);
+#define MARDispatchCenter [MARDispatch defaultCenter]
+typedef MAREntity *(^MARPackageBlock)(RACTuple *tuple);
 
 @interface MARDispatch : NSObject
 
@@ -30,33 +29,8 @@ typedef MARDispatch *(^MARPackageBlock)(RACTuple *tuple);
 /// @name Channel Operation
 ///------------------------
 
-- (nonnull MARDispatch *)mainChannel;
-- (nonnull MARDispatch * _Nonnull (^)(NSString * _Nonnull name))channel;
-
-///-----------------------
-/// @name Header Operation
-///-----------------------
-
-- (nonnull MARDispatch * (^)(NSDictionary *header))header;
-
-///----------------------------
-/// @name HTTP Method Operation
-///----------------------------
-
-- (MARDispatch * _Nonnull)get;
-- (MARDispatch * _Nonnull)post;
-- (MARDispatch * _Nonnull)dele;
-- (MARDispatch * _Nonnull)put;
-
-///------------------------
-/// @name Request Operation
-///------------------------
-
-- (RACSignal *_Nonnull)start;
-- (RACSignal *_Nonnull)upload;
-- (void)stop;
-
-+ (RACSignal *_Nonnull)deliverWithPackage:(MARPackage *_Nonnull)package channel:(NSString *_Nullable)channel;
+- (nonnull MAREntity *)mainChannel;
+- (nonnull MAREntity * _Nonnull (^)(NSString * _Nonnull name))channel;
 
 @end
 

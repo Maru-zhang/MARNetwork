@@ -10,26 +10,27 @@
 
 @interface MAREntity : NSObject
 
-@property (nonatomic, copy, readonly) NSString *url;
-@property (nonatomic, copy, readonly) NSString *channelName;
-@property (nonatomic, strong, readonly) id params;
-@property (nonatomic, strong, readonly) NSSet *httpHeader;
+@property (nonatomic, copy, readonly, nonnull) NSString *url;
+@property (nonatomic, copy, readonly, nonnull) NSString *channelName;
+@property (nonatomic, strong, readonly, nullable) id params;
+@property (nonatomic, strong, readonly, nullable) NSDictionary<NSString *, NSString *> *headers;
 @property (nonatomic, assign, readonly) MARHTTPMethodType type;
+@property (nonatomic, strong, readonly, nullable) NSURLSessionTask *task;
 
 ///-----------------------
 /// @name Header Operation
 ///-----------------------
 
-- (nonnull MARDispatch * (^)(NSDictionary *header))header;
+- (MAREntity * _Nonnull (^)(NSDictionary *header))header;
 
 ///----------------------------
 /// @name HTTP Method Operation
 ///----------------------------
 
-- (MARDispatch * _Nonnull)get;
-- (MARDispatch * _Nonnull)post;
-- (MARDispatch * _Nonnull)dele;
-- (MARDispatch * _Nonnull)put;
+- (MAREntity * _Nonnull)get;
+- (MAREntity * _Nonnull)post;
+- (MAREntity * _Nonnull)dele;
+- (MAREntity * _Nonnull)put;
 
 ///------------------------
 /// @name Request Operation
@@ -40,7 +41,7 @@
 - (void)stop;
 
 ///------------------------
-/// @name Request Operation
+/// @name Initialize Operator
 ///------------------------
 
 - (instancetype)initWithChannelName:(NSString *)channel;
