@@ -11,5 +11,6 @@
 @implementation MAREntity (Demo)
 
 MARImplementation(getRequest,@"get",@[@"params"])
+MARImplementation(postRequest, @"post", @[@"key"]);
 
 @end

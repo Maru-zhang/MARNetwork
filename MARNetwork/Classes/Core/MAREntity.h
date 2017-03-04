@@ -21,7 +21,7 @@
 /// @name Header Operation
 ///-----------------------
 
-- (MAREntity * _Nonnull (^)(NSDictionary *header))header;
+- (MAREntity * _Nonnull (^)(NSDictionary * _Nullable header))header;
 
 ///----------------------------
 /// @name HTTP Method Operation
@@ -37,13 +37,12 @@
 ///------------------------
 
 - (RACSignal *_Nonnull)start;
-- (RACSignal *_Nonnull)upload;
 - (void)stop;
 
 ///------------------------
 /// @name Initialize Operator
 ///------------------------
 
-- (instancetype)initWithChannelName:(NSString *)channel;
+- (instancetype)initWithChannelName:(NSString * _Nonnull)channel;
 
 @end

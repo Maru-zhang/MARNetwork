@@ -88,8 +88,11 @@
             [subscriber sendError:error];
         }];
         
+        @weakify(self);
         return [RACDisposable disposableWithBlock:^{
-            
+            @strongify(self);
+            [self stop];
+            self.task = nil;
         }];
     }];
 }

@@ -11,5 +11,7 @@
 @interface MAREntity (Demo)
 
 MARInterface(getRequest)
+MARInterface(postRequest)
+
 
 @end

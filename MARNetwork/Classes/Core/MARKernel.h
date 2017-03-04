@@ -28,7 +28,7 @@ return ^id (RACTuple *tuple) { \
 [self setValue:url forKey:@"url"]; \
 NSMutableDictionary *params = [NSMutableDictionary dictionary]; \
 [keys enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) { \
-[params setObject:tuple[idx] forKey:obj]; \
+if (tuple.count > idx) {[params setObject:tuple[idx] forKey:obj]; } \
 }]; \
 [self setValue:params forKey:@"params"]; \
 return self; \
