@@ -13,5 +13,4 @@
 MARInterface(getRequest)
 MARInterface(postRequest)
 
-
 @end

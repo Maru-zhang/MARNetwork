@@ -45,7 +45,9 @@
     
     XCTestExpectation *expectation = [self expectationWithDescription:@"Request with GET method should succeed."];
     
-    RACSignal *signal = MARDispatchCenter.mainChannel.get.getRequest(RACTuplePack(@"maru-zhang")).start;
+    RACSignal *signal = MARDispatchCenter.mainChannel
+                                         .get
+                                         .getRequest(RACTuplePack(@"maru-zhang")).start;
     
     [signal subscribeNext:^(id  _Nullable x) {
         XCTAssertTrue([x[@"args"][@"params"] isEqualToString:@"maru-zhang"]);
@@ -61,6 +63,7 @@
 }
 
 - (void)testPOSTWithForm {
+    
     XCTestExpectation *expectation = [self expectationWithDescription:@"Request with POST method should succeed."];
     
     RACSignal *signal = MARDispatchCenter.mainChannel.post.postRequest(RACTuplePack(@"value")).start;

@@ -32,8 +32,10 @@
 
 - (IBAction)request_1:(id)sender {
     
-    RACSignal *signal = MARDispatchCenter.mainChannel.get.getRequest(nil).start;
-    
+    MAREntity *entity = MARDispatchCenter.mainChannel;
+
+    RACSignal *signal = entity.get.getRequest(nil).start;
+
     [signal subscribeNext:^(id  _Nullable x) {
         NSLog(@"请求成功:%@",x);
     }];
