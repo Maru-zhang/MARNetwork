@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MARNetwork'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'A tiny and legant Network abstraction layer with ReactiveObjC.'
 
 # This description is used to generate tags and improve search results.
