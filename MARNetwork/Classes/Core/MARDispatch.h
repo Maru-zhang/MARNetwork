@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "MARKernel.h"
 
+#define MARDispatchCenter [MARDispatch defaultCenter]
+
+NS_ASSUME_NONNULL_BEGIN
+
 @class MARDispatch;
 @class MAREntity;
 
-#define MARDispatchCenter [MARDispatch defaultCenter]
 typedef MAREntity *(^MARPackageBlock)(RACTuple *tuple);
 
 @interface MARDispatch : NSObject
@@ -39,7 +42,9 @@ typedef MAREntity *(^MARPackageBlock)(RACTuple *tuple);
 - (NSURLSessionDataTask *)taskWithURL:(NSString * _Nonnull)url
              method:(MARHTTPMethodType)method
          parameters:(nullable id)parameters
-            success:(nullable void (^)(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject))success
-            failure:(nullable void (^)(NSURLSessionDataTask * _Nonnull task, NSError *_Nullable error))failure;
+            success:(void (^)(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject))success
+            failure:(void (^)(NSURLSessionDataTask * _Nonnull task, NSError *_Nullable error))failure;
 
 @end
+
+NS_ASSUME_NONNULL_END

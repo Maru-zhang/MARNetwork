@@ -11,7 +11,7 @@
 #if __has_include("ReactiveCocoa.h")
 #import "ReactiveCocoa.h"
 #else
-#import <ReactiveObjC/ReactiveObjc.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 #endif
 
 #if __has_include(<AFNetworking/AFNetworking.h>)

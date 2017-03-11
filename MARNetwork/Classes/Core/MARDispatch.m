@@ -51,8 +51,8 @@
 - (NSURLSessionDataTask *)taskWithURL:(NSString * _Nonnull)url
              method:(MARHTTPMethodType)method
          parameters:(nullable id)parameters
-            success:(nullable void (^)(NSURLSessionDataTask *_Nullable task, id _Nullable responseObject))success
-            failure:(nullable void (^)(NSURLSessionDataTask *_Nullable task, NSError *_Nullable error))failure {
+            success:(void (^)(NSURLSessionDataTask *_Nullable task, id _Nullable responseObject))success
+            failure:(void (^)(NSURLSessionDataTask *_Nullable task, NSError *_Nullable error))failure {
     switch (method) {
         case 0: {
             return [self GET:url parameters:parameters progress:nil success:success failure:failure];
