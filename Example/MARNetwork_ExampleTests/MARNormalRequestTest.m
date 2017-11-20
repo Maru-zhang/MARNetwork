@@ -15,14 +15,6 @@
 
 @implementation MARNormalRequestTest
 
-- (void)setUp {
-    [super setUp];
-}
-
-- (void)tearDown {
-    [super tearDown];
-}
-
 - (void)testGET {
     
     XCTestExpectation *expectation = [self expectationWithDescription:@"Request with GET method should succeed."];
@@ -42,13 +34,11 @@
 }
 
 - (void)testGETWithParameters {
-    
     XCTestExpectation *expectation = [self expectationWithDescription:@"Request with GET method should succeed."];
-    
     RACSignal *signal = MARDispatchCenter.mainChannel
                                          .get
                                          .getRequest(RACTuplePack(@"maru-zhang")).start;
-    
+
     [signal subscribeNext:^(id  _Nullable x) {
         XCTAssertTrue([x[@"args"][@"params"] isEqualToString:@"maru-zhang"]);
         [expectation fulfill];
@@ -62,22 +52,22 @@
     [self waitForExpectationsWithCommonTimeout];
 }
 
-- (void)testPOSTWithForm {
-    
-    XCTestExpectation *expectation = [self expectationWithDescription:@"Request with POST method should succeed."];
-    
-    RACSignal *signal = MARDispatchCenter.mainChannel.post.postRequest(RACTuplePack(@"value")).start;
-    
-    [signal subscribeNext:^(id  _Nullable x) {
-        XCTAssertTrue([x[@"form"][@"key"] isEqualToString:@"value"]);
-        [expectation fulfill];
-    }];
-    
-    [signal subscribeError:^(NSError * _Nullable error) {
-        XCTAssert(NO, @"request should not send error stream.");
-    }];
-    
-    [self waitForExpectationsWithCommonTimeout];
-}
+//- (void)testPOSTWithForm {
+//
+//    XCTestExpectation *expectation = [self expectationWithDescription:@"Request with POST method should succeed."];
+//
+//    RACSignal *signal = MARDispatchCenter.mainChannel.post.postRequest(RACTuplePack(@"value")).start;
+//
+//    [signal subscribeNext:^(id  _Nullable x) {
+//        XCTAssertTrue([x[@"form"][@"key"] isEqualToString:@"value"]);
+//        [expectation fulfill];
+//    }];
+//
+//    [signal subscribeError:^(NSError * _Nullable error) {
+//        XCTAssert(NO, @"request should not send error stream.");
+//    }];
+//
+//    [self waitForExpectationsWithCommonTimeout];
+//}
 
 @end

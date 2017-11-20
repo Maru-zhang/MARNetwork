@@ -15,7 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - Expecta (1.0.5)
-  - MARNetwork (0.1.0):
+  - MARNetwork (0.2.0):
     - AFNetworking (~> 3.1.0)
     - ReactiveObjC (~> 2.1.2)
   - ReactiveObjC (2.1.2)
@@ -28,15 +28,15 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   MARNetwork:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
-  MARNetwork: 4fe9dbddd3a9689a7d65bf4a6dd2fb1a639ba964
+  MARNetwork: 8be94dda6a0eb579d0ecf08b2f39704e13193b50
   ReactiveObjC: 7b6782ae39f9ac0f57205c3b0c0b69b9dd7048c0
   Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
 
 PODFILE CHECKSUM: 05181346d640241442579f8360ac9c78623e6878
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.2.1
